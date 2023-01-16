@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/mdwhatcott/must"
+	"github.com/mdwhatcott/must/must"
 )
 
 func TestNada(t *testing.T)   { defer catch(t); must.Nada(nada()) }
