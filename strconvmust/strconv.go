@@ -1,6 +1,6 @@
-// Package muststrconv is a must-style wrapper over the standard library strconv package.
+// Package strconvmust is a must-style wrapper over the standard library strconv package.
 // All functions panic in response to any errors encountered.
-package muststrconv
+package strconvmust
 
 import (
 	"strconv"

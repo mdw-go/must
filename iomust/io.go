@@ -1,6 +1,6 @@
-// Package mustio is a must-style wrapper over the standard library io package.
+// Package iomust is a must-style wrapper over the standard library io package.
 // All functions panic in response to any errors encountered.
-package mustio
+package iomust
 
 import (
 	"io"

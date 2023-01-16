@@ -1,6 +1,6 @@
-// Package mustfilepath is a must-style wrapper over the standard library filepath package.
+// Package filepathmust is a must-style wrapper over the standard library filepath package.
 // All functions panic in response to any errors encountered.
-package mustfilepath
+package filepathmust
 
 import (
 	"io/fs"

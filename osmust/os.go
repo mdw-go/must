@@ -1,6 +1,6 @@
-// Package mustos is a must-style wrapper over the standard library os package.
+// Package osmust is a must-style wrapper over the standard library os package.
 // All functions panic in response to any errors encountered.
-package mustos
+package osmust
 
 import (
 	"os"
