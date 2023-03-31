@@ -18,6 +18,8 @@ func CreateTemp(dir, pattern string) *os.File              { return must.Value(o
 func Executable() string                                   { return must.Value(os.Executable()) }
 func FindProcess(pid int) *os.Process                      { return must.Value(os.FindProcess(pid)) }
 func Getgroups() []int                                     { return must.Value(os.Getgroups()) }
+func Getwd() (dir string)                                  { return must.Value(os.Getwd()) }
+func Hostname() (name string)                              { return must.Value(os.Hostname()) }
 func Lchown(name string, uid, gid int)                     { must.Nada(os.Lchown(name, uid, gid)) }
 func Link(oldname, newname string)                         { must.Nada(os.Link(oldname, newname)) }
 func Lstat(name string) os.FileInfo                        { return must.Value(os.Lstat(name)) }
@@ -26,6 +28,7 @@ func MkdirAll(path string, perm os.FileMode)               { must.Nada(os.MkdirA
 func MkdirTemp(dir, pattern string) string                 { return must.Value(os.MkdirTemp(dir, pattern)) }
 func NewSyscallError(syscall string, err error)            { must.Nada(os.NewSyscallError(syscall, err)) }
 func Open(name string) *os.File                            { return must.Value(os.Open(name)) }
+func Pipe() (r *os.File, w *os.File)                       { return must.Values(os.Pipe()) }
 func ReadDir(name string) []os.DirEntry                    { return must.Value(os.ReadDir(name)) }
 func ReadFile(name string) []byte                          { return must.Value(os.ReadFile(name)) }
 func Readlink(name string) string                          { return must.Value(os.Readlink(name)) }
