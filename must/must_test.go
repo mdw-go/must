@@ -21,3 +21,22 @@ var err = errors.New("err")
 func nada() error               { return err }
 func value() (int, error)       { return 0, err }
 func values() (int, int, error) { return 0, 0, err }
+
+func TestDeferExecuted(t *testing.T) {
+	counter := 0
+	defer func() {
+		if counter == 0 {
+			t.Error("should have incremented counter")
+		}
+	}()
+	incrementer := func() error {
+		counter++
+		return nil
+	}
+	defer must.Defer(incrementer)()
+}
+func TestDeferPanics(t *testing.T) {
+	defer catch(t)
+	fails := func() error { return err }
+	defer must.Defer(fails)()
+}

@@ -18,3 +18,6 @@ func Nada(err error) {
 		panic(err)
 	}
 }
+func Defer(f func() error) func() {
+	return func() { Nada(f()) }
+}
