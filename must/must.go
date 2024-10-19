@@ -13,11 +13,11 @@ func Values[T1 any, T2 any](out1 T1, out2 T2, err error) (T1, T2) {
 	}
 	return out1, out2
 }
-func Nada(err error) {
+func Void(err error) {
 	if err != nil {
 		panic(err)
 	}
 }
 func Defer(f func() error) func() {
-	return func() { Nada(f()) }
+	return func() { Void(f()) }
 }
