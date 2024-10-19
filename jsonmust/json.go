@@ -6,14 +6,14 @@ import (
 	"bytes"
 	"encoding/json"
 
-	"github.com/mdwhatcott/must/must"
+	"github.com/mdw-go/must/must"
 )
 
 func Compact(dst *bytes.Buffer, src []byte) {
-	must.Nada(json.Compact(dst, src))
+	must.Void(json.Compact(dst, src))
 }
 func Indent(dst *bytes.Buffer, src []byte, prefix, indent string) {
-	must.Nada(json.Indent(dst, src, prefix, indent))
+	must.Void(json.Indent(dst, src, prefix, indent))
 }
 func Marshal(v any) []byte {
 	return must.Value(json.Marshal(v))
@@ -22,5 +22,5 @@ func MarshalIndent(v any, prefix, indent string) []byte {
 	return must.Value(json.MarshalIndent(v, prefix, indent))
 }
 func Unmarshal(data []byte, v any) {
-	must.Nada(json.Unmarshal(data, v))
+	must.Void(json.Unmarshal(data, v))
 }

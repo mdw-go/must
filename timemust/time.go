@@ -5,7 +5,7 @@ package timemust
 import (
 	"time"
 
-	"github.com/mdwhatcott/must/must"
+	"github.com/mdw-go/must/must"
 )
 
 func ParseDuration(s string) time.Duration {

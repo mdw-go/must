@@ -5,7 +5,7 @@ package iomust
 import (
 	"io"
 
-	"github.com/mdwhatcott/must/must"
+	"github.com/mdw-go/must/must"
 )
 
 func Copy(dst io.Writer, src io.Reader) int64 {

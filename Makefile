@@ -6,4 +6,4 @@ test:
 	go test -cover -timeout=1s -race ./...
 
 onefile:
-	@go-mergepkg -dirs "must" -header "github.com/mdwhatcott/must@$(shell git describe) (a little copy-paste is better than a little dependency)"
+	@go-mergepkg -dirs "must" -header "github.com/mdw-go/must@$(shell git describe) (a little copy-paste is better than a little dependency)"

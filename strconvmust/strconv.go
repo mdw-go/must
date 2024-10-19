@@ -5,7 +5,7 @@ package strconvmust
 import (
 	"strconv"
 
-	"github.com/mdwhatcott/must/must"
+	"github.com/mdw-go/must/must"
 )
 
 func Atoi(s string) int {

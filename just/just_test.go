@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/mdwhatcott/must/just"
+	"github.com/mdw-go/must/just"
 )
 
 func TestNoErrIgnore(t *testing.T) { defer assertErrorIgnored(t); just.Ignore(nada()) }

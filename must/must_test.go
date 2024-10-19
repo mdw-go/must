@@ -4,10 +4,10 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/mdwhatcott/must/must"
+	"github.com/mdw-go/must/must"
 )
 
-func TestNada(t *testing.T)   { defer catch(t); must.Nada(nada()) }
+func TestNada(t *testing.T)   { defer catch(t); must.Void(nada()) }
 func TestValue(t *testing.T)  { defer catch(t); _ = must.Value(value()) }
 func TestValues(t *testing.T) { defer catch(t); _, _ = must.Values(values()) }
 func catch(t *testing.T) {

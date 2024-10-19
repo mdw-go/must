@@ -4,7 +4,7 @@ import (
 	f "fmt"
 	"io"
 
-	"github.com/mdwhatcott/must/must"
+	"github.com/mdw-go/must/must"
 )
 
 func Fprint(w io.Writer, a ...any) (n int)              { return must.Value(f.Fprint(w, a...)) }
